@@ -1,2 +1,2 @@
 # sorting-arithmetic
-Perform arithmetic operation with a, b, c and Sort in Descendind and Ascending Order.✔ 
+Perform arithmetic operation with a, b, c and Sort in Descending and Ascending Order.✔ 
