@@ -13,3 +13,16 @@ for ((index=0;index<4;index++))
 do
 	results_array[$index]=${results_dict[$index]}
 done
+for ((i=0;i<4;i++))
+do
+	for ((j=i+1;j<4;j++))
+	do
+		if [ ${results_array[$i]} -lt ${results_array[$j]} ]
+		then
+			temp=${results_array[$i]}
+			results_array[$i]=${results_array[$j]}
+			results_array[$j]=$temp
+		fi
+	done
+done
+echo "Decending" ${results_array[@]}
