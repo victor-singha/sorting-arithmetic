@@ -8,3 +8,8 @@ val3=$((c+a/b))
 val4=$((a%b+c))
 declare -A results_dict
 results_dict=([0]=$val1 [1]=$val2 [2]=$val3 [3]=$val4)
+declare -a results_array
+for ((index=0;index<4;index++))
+do
+	results_array[$index]=${results_dict[$index]}
+done
