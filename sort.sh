@@ -7,11 +7,13 @@ val2=$((a*b+c))
 val3=$((c+a/b))
 val4=$((a%b+c))
 declare -A results_dict
-results_dict=([0]=$val1 [1]=$val2 [2]=$val3 [3]=$val4)
+results_dict=([v1]=$val1 [v2]=$val2 [v3]=$val3 [v4]=$val4)
 declare -a results_array
-for ((index=0;index<4;index++))
+index=0
+for k in ${!results_dict[@]}
 do
-	results_array[$index]=${results_dict[$index]}
+	results_array[$index]=${results_dict[$k]}
+	index=$((index+1))
 done
 for ((i=0;i<4;i++))
 do
